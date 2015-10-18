@@ -5,7 +5,7 @@ var morgan = require('morgan');             // log requests to the console (expr
 var bodyParser = require('body-parser');    // pull information from HTML POST (express4)
 var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
 
-mongoose.connect('mongodb://localhost/simple');
+mongoose.connect('mongodb://admin:admin@ds041164.mongolab.com:41164/hosthunter');
 
 var personSchema = {
 	firstName: String,
