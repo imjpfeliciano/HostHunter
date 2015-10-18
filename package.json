@@ -1,9 +1,9 @@
 {
-  "name"         : "node-todo",
+  "name"         : "HostHunter",
   "version"      : "0.0.0",
-  "description"  : "Simple todo application.",
-  "main"         : "app.js",
-  "author"       : "Scotch",
+  "description"  : "HostHunter demo application",
+  "main"         : "index.js",
+  "author"       : "JPFeliciano",
   "dependencies" : {
     "express"    : "~4.7.2",
     "mongoose"   : "~3.6.2",
