@@ -6,21 +6,21 @@ app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
 
 // views is directory for all template files
-app.set('views', __dirname + '/views');
+//app.set('views', __dirname + '/views');
 //app.set('view engine', 'ejs');
 
 app.get('/list', function(request, response){
 	var data = [
- 				    {"firstName":"John", "lastName":"Doe"}, 
-    				{"firstName":"Anna", "lastName":"Smith"}, 
-				    {"firstName":"Peter","lastName":"Jones"}
+ 				    {"firstName":"John", "lastName":"Doe", "email":"John@example.com"}, 
+    				{"firstName":"Anna", "lastName":"Smith", "email":"Anna@example.com"}, 
+				    {"firstName":"Peter","lastName":"Jones", "email": "Peter@example.com"}
 				];
 
 	response.json(data);
 });
 
 app.get('/', function(request, response) {
-  response.render('pages/index');
+  response.sendfile('./public/index.html');
 });
 
 app.listen(app.get('port'), function() {
