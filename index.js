@@ -7,7 +7,17 @@ app.use(express.static(__dirname + '/public'));
 
 // views is directory for all template files
 app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
+//app.set('view engine', 'ejs');
+
+app.get('/list', function(request, response){
+	var data = [
+ 				    {"firstName":"John", "lastName":"Doe"}, 
+    				{"firstName":"Anna", "lastName":"Smith"}, 
+				    {"firstName":"Peter","lastName":"Jones"}
+				];
+
+	response.json(data);
+});
 
 app.get('/', function(request, response) {
   response.render('pages/index');
